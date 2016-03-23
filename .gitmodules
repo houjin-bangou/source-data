@@ -1,0 +1,6 @@
+[submodule "data-raw"]
+	path = data-raw
+	url = git@github.com:houjin-bangou/source-data-raw.git
+[submodule "data-sqlite3"]
+	path = data-sqlite3
+	url = git@github.com:houjin-bangou/source-data-sqlite3.git
