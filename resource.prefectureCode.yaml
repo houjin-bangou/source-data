@@ -1,0 +1,146 @@
+prefectureCode:
+  "01":
+    roma: "hokkaido"
+    name: "北海道"
+  "02":
+    roma: "aomori"
+    name: "青森県"
+  "03":
+    roma: "iwate"
+    name: "岩手県"
+  "04":
+    roma: "miyagi"
+    name: "宮城県"
+  "05":
+    roma: "akita"
+    name: "秋田県"
+  "06":
+    roma: "yamagata"
+    name: "山形県"
+  "07":
+    roma: "fukushima"
+    name: "福島県"
+  "08":
+    roma: "ibaraki"
+    name: "茨城県"
+  "09":
+    roma: "tochigi"
+    name: "栃木県"
+  "10":
+    roma: "gunma"
+    name: "群馬県"
+  "11":
+    roma: "saitama"
+    name: "埼玉県"
+  "12":
+    roma: "chiba"
+    name: "千葉県"
+  "13":
+    roma: "tokyo"
+    name: "東京都"
+  "14":
+    roma: "kanagawa"
+    name: "神奈川県"
+  "15":
+    roma: "niigata"
+    name: "新潟県"
+  "16":
+    roma: "toyama"
+    name: "富山県"
+  "17":
+    roma: "ishikawa"
+    name: "石川県"
+  "18":
+    roma: "fukui"
+    name: "福井県"
+  "19":
+    roma: "yamanashi"
+    name: "山梨県"
+  "20":
+    roma: "nagano"
+    name: "長野県"
+  "21":
+    roma: "gifu"
+    name: "岐阜県"
+  "22":
+    roma: "shizuoka"
+    name: "静岡県"
+  "23":
+    roma: "aichi"
+    name: "愛知県"
+  "24":
+    roma: "mie"
+    name: "三重県"
+  "25":
+    roma: "shiga"
+    name: "滋賀県"
+  "26":
+    roma: "kyoto"
+    name: "京都府"
+  "27":
+    roma: "osaka"
+    name: "大阪府"
+  "28":
+    roma: "hyogo"
+    name: "兵庫県"
+  "29":
+    roma: "nara"
+    name: "奈良県"
+  "30":
+    roma: "wakayama"
+    name: "和歌山県"
+  "31":
+    roma: "tottori"
+    name: "鳥取県"
+  "32":
+    roma: "shimane"
+    name: "島根県"
+  "33":
+    roma: "okayama"
+    name: "岡山県"
+  "34":
+    roma: "hiroshima"
+    name: "広島県"
+  "35":
+    roma: "yamaguchi"
+    name: "山口県"
+  "36":
+    roma: "tokushima"
+    name: "徳島県"
+  "37":
+    roma: "kagawa"
+    name: "香川県"
+  "38":
+    roma: "ehime"
+    name: "愛媛県"
+  "39":
+    roma: "kochi"
+    name: "高知県"
+  "40":
+    roma: "fukuoka"
+    name: "福岡県"
+  "41":
+    roma: "saga"
+    name: "佐賀県"
+  "42":
+    roma: "nagasaki"
+    name: "長崎県"
+  "43":
+    roma: "kumamoto"
+    name: "熊本県"
+  "44":
+    roma: "oita"
+    name: "大分県"
+  "45":
+    roma: "miyazaki"
+    name: "宮崎県"
+  "46":
+    roma: "kagoshima"
+    name: "鹿児島県"
+  "47":
+    roma: "okinawa"
+    name: "沖縄県"
+  "99":
+    roma: "kokugai"
+    name: "国外"
+

@@ -1,20 +1,8 @@
-corporations:
-  # see: http://www.houjin-bangou.nta.go.jp/documents/k-resource-dl.pdf
-  # for Web-API
-  lastUpdateDate:
-    name: "最終更新年月日"
-  count:
-    name: "総件数"
-  divideNumber:
-    name: "分割番号"
-  divideSize:
-    name: "分割数"
-  corporation:
-    name: "法人等要素"
-  sequenceNumber:
-    name: "一連番号"
+# see: http://www.houjin-bangou.nta.go.jp/documents/k-resource-dl.pdf
+corporation:
   corporateNumber:
     name: "法人番号"
+    description: ""
   process:
     name: "処理区分"
     description: "法人番号の指定、商号又は所在地に変更等が発生した事由をコード値で表す項目。"
@@ -22,273 +10,143 @@ corporations:
       "01":
         name: "新規"
         description: "新たに法人番号が公表されたことを表す情報であることを意味する。"
-      11:
+      "11":
         name: "商号又は名称の変更"
         description: "商号又は名称が変更されたことを表す情報であることを意味する。"
-      12:
+      "12":
         name: "国内所在地の変更"
         description: "国内における本店又は主たる事務所の所在地の変更、国内に本店又は主たる事務所がない法人等の場合は、国内における事務所又は営業所の所在地の変更又は、市区町村合併等により住居表示が変更されたことを表す情報であることを意味する。"
-      13:
+      "13":
         name: "国外所在地の変更"
         description: "国外における本店又は主たる事務所の所在地が変更されたことを表す情報であることを意味する。"
-      21:
+      "21":
         name: "登記記録の閉鎖等"
         description: "清算の結了、合併による解散などの事由により登記記録の閉鎖等の事由が生じたことを表す情報であることを意味する。"
-      22:
+      "22":
         name: "登記記録の復活等"
         description: "法人等が清算の結了、合併による解散などの事由により登記記録の閉鎖等が生じた後、清算結了等の手続きに瑕疵があり、清算結了が無効になるなどの事由により登記記録が復活等したことを表す情報であることを意味する。"
-      71:
+      "71":
         name: "吸収合併"
         description: "設立登記法人が、吸収合併を行ったことを表す情報であることを意味する。"
-      72:
+      "72":
         name: "吸収合併無効"
         description: "吸収合併後存続した設立登記法人の吸収合併について無効判決が確定したことを表す情報であることを意味する。"
-      81:
+      "81":
         name: "商号の登記の抹消"
         description: "設立登記法人について商号の登記が抹消されたことを表す情報であることを意味する。"
-      99:
+      "99":
         name: "削除"
         description: "法人番号の重複指定等の理由により法人番号の指定を撤回したことを表す情報であることを意味する。"
   correct:
     name: "訂正区分"
     description: "訂正区分は、誤った内容で提供したデータを正しいデータに訂正するために使用するデータ項目。当該データ項目を活用し、誤った内容のデータを削除して、訂正後の正しいデータを取り込むことにより、データを訂正することができる。なお、訂正処理があった場合は、訂正した法人等に係る全ての履歴データを提供する。"
     values:
-      0:
+      "0":
         name: "訂正以外"
         description: "訂正したデータ（訂正区分が「1」）以外の場合、当該訂正区分に訂正以外「0」を設定する。"
-      1:
+      "1":
         name: "訂正"
         description: "訂正したデータの場合、当該訂正区分に訂正「1」を設定する。"
   updateDate:
     name: "更新年月日"
+    description: ""
   changeDate:
     name: "変更年月日"
+    description: ""
   name:
     name: "商号又は名称"
+    description: ""
   nameImageId:
     name: "商号又は名称イメージID"
-    uri_format: "http://www.houjin-bangou.nta.go.jp/image?imageid=%s"
+    uriFormat: "http://www.houjin-bangou.nta.go.jp/image?imageid=%s"
   kind:
     name: "法人種別"
     description: "法人種別を判別するためのデータ項目。例えば、データの取込み処理を行う場合などにおいて、処理対象として必要としない法人（組織区分）のデータを、法人種別のコード値を利用して除外設定を行うなどの活用が考えられるために提供する項目。"
     values:
-      101:
+      "101":
         name: "国の機関"
         description: "行政機関、裁判所及び国会の機関に係る情報であることを意味する。"
-      201:
+      "201":
         name: "地方公共団体"
         description: "地方自治法第１条の３において定義されている普通地方公共団体及び特別地方公共団体に係る情報であることを意味する。"
-      301:
+      "301":
         name: "株式会社"
         description: "株式会社の情報であることを意味する。"
-      302:
+      "302":
         name: "有限会社"
         description: "特例有限会社の情報であることを意味する。"
-      303:
+      "303":
         name: "合名会社"
         description: "合名会社の情報であることを意味する。"
-      304:
+      "304":
         name: "合資会社"
         description: "合資会社の情報であることを意味する。"
-      305:
+      "305":
         name: "合同会社"
         description: "合同会社の情報であることを意味する。"
-      399:
+      "399":
         name: "その他の設立登記法人"
         description: "株式会社（301）、有限会社（302）、合名会社（303）、合資会社（304）及び合同会社（305）以外の法令の規定により設立の登記をすることによって成立する法人の情報であることを意味する。"
-      401:
+      "401":
         name: "外国会社等"
         description: "外国、外国の行政区画及び外国会社並びに法律又は条約の規定により認許された外国法人の情報であることを意味する。"
-      499:
+      "499":
         name: "その他"
         description: "その他の人格のない社団等及び日本の法律の規定により成立し、設立の登記を行わない法人の情報であることを意味する。"
   prefectureName:
     name: "国内所在地（都道府県）"
+    description: ""
+#   values: "See another file. ( resource.prefectureCode.yaml )"
   cityName:
     name: "国内所在地（市区町村）"
+    description: ""
   streetNumber:
     name: "国内所在地（丁目番地等）"
+    description: ""
   addressImageId:
     name: "国内所在地イメージID"
-    uri_format: "http://www.houjin-bangou.nta.go.jp/image?imageid=%s"
+    description: ""
+    uriFormat: "http://www.houjin-bangou.nta.go.jp/image?imageid=%s"
   prefectureCode:
     name: "都道府県コード"
-# @TODO : 以下の values を別ファイル化
-#   values:
-#     "01":
-#       roma: "hokkaido"
-#       name: "北海道"
-#     "02":
-#       roma: "aomori"
-#       name: "青森県"
-#     "03":
-#       roma: "iwate"
-#       name: "岩手県"
-#     "04":
-#       roma: "miyagi"
-#       name: "宮城県"
-#     "05":
-#       roma: "akita"
-#       name: "秋田県"
-#     "06":
-#       roma: "yamagata"
-#       name: "山形県"
-#     "07":
-#       roma: "fukushima"
-#       name: "福島県"
-#     "08":
-#       roma: "ibaraki"
-#       name: "茨城県"
-#     "09":
-#       roma: "tochigi"
-#       name: "栃木県"
-#     "10":
-#       roma: "gunma"
-#       name: "群馬県"
-#     "11":
-#       roma: "saitama"
-#       name: "埼玉県"
-#     "12":
-#       roma: "chiba"
-#       name: "千葉県"
-#     "13":
-#       roma: "tokyo"
-#       name: "東京都"
-#     "14":
-#       roma: "kanagawa"
-#       name: "神奈川県"
-#     "15":
-#       roma: "niigata"
-#       name: "新潟県"
-#     "16":
-#       roma: "toyama"
-#       name: "富山県"
-#     "17":
-#       roma: "ishikawa"
-#       name: "石川県"
-#     "18":
-#       roma: "fukui"
-#       name: "福井県"
-#     "19":
-#       roma: "yamanashi"
-#       name: "山梨県"
-#     "20":
-#       roma: "nagano"
-#       name: "長野県"
-#     "21":
-#       roma: "gifu"
-#       name: "岐阜県"
-#     "22":
-#       roma: "shizuoka"
-#       name: "静岡県"
-#     "23":
-#       roma: "aichi"
-#       name: "愛知県"
-#     "24":
-#       roma: "mie"
-#       name: "三重県"
-#     "25":
-#       roma: "shiga"
-#       name: "滋賀県"
-#     "26":
-#       roma: "kyoto"
-#       name: "京都府"
-#     "27":
-#       roma: "osaka"
-#       name: "大阪府"
-#     "28":
-#       roma: "hyogo"
-#       name: "兵庫県"
-#     "29":
-#       roma: "nara"
-#       name: "奈良県"
-#     "30":
-#       roma: "wakayama"
-#       name: "和歌山県"
-#     "31":
-#       roma: "tottori"
-#       name: "鳥取県"
-#     "32":
-#       roma: "shimane"
-#       name: "島根県"
-#     "33":
-#       roma: "okayama"
-#       name: "岡山県"
-#     "34":
-#       roma: "hiroshima"
-#       name: "広島県"
-#     "35":
-#       roma: "yamaguchi"
-#       name: "山口県"
-#     "36":
-#       roma: "tokushima"
-#       name: "徳島県"
-#     "37":
-#       roma: "kagawa"
-#       name: "香川県"
-#     "38":
-#       roma: "ehime"
-#       name: "愛媛県"
-#     "39":
-#       roma: "kochi"
-#       name: "高知県"
-#     "40":
-#       roma: "fukuoka"
-#       name: "福岡県"
-#     "41":
-#       roma: "saga"
-#       name: "佐賀県"
-#     "42":
-#       roma: "nagasaki"
-#       name: "長崎県"
-#     "43":
-#       roma: "kumamoto"
-#       name: "熊本県"
-#     "44":
-#       roma: "oita"
-#       name: "大分県"
-#     "45":
-#       roma: "miyazaki"
-#       name: "宮崎県"
-#     "46":
-#       roma: "kagoshima"
-#       name: "鹿児島県"
-#     "47":
-#       roma: "okinawa"
-#       name: "沖縄県"
-#     "99":
-#       roma: "kokugai"
-#       name: "国外"
+    description: ""
   cityCode:
     name: "市区町村コード"
+    description: ""
   postCode:
     name: "郵便番号"
+    description: ""
   addressOutside:
     name: "国外所在地"
   addressOutsideImageId:
     name: "国外所在地イメージID"
+    description: ""
   closeDate:
     name: "登記記録の閉鎖等年月日"
+    description: ""
   closeCause:
     name: "登記記録の閉鎖等の事由"
     description: "閉鎖の事由は、登記記録の閉鎖等が生じた事由を表すデータ項目。"
     values:
-      01:
+      "01":
         name: "清算の結了等"
         description: "設立登記法人について、清算の結了等により登記記録が閉鎖された事を意味する。"
-      11:
+      "11":
         name: "合併による解散等"
         description: "設立登記法人について、合併による解散等により登記記録が閉鎖された事を意味する。"
-      21:
+      "21":
         name: "登記官による閉鎖"
         description: "設立登記法人について、商業登記規則第81条第1項による登記記録の閉鎖された事を意味する。"
-      31:
+      "31":
         name: "その他の清算の結了等"
         description: "設立登記法人以外について、清算の結了等に類する事由が生じた場合に表示します。"
   successorCorporateNumber:
     name: "承継先法人番号"
+    description: ""
   changeCause:
     name: "変更事由の詳細"
+    description: ""
   assignmentDate:
     name: "法人番号指定年月日"
+    description: ""
 
