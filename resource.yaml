@@ -1,11 +1,16 @@
 # see: http://www.houjin-bangou.nta.go.jp/documents/k-resource-dl.pdf
+# see: http://www.houjin-bangou.nta.go.jp/documents/k-resource-dl-ver2.pdf
 corporation:
   corporateNumber:
+    camel_case: corporateNumber
+    snake_case: corporate_number
     name: "法人番号"
     description: ""
   process:
+    camel_case: process
+    snake_case: process
     name: "処理区分"
-    description: "法人番号の指定、商号又は所在地に変更等が発生した事由をコード値で表す項目。"
+    description: "法人番号の指定、商号又は所在地に変更等が発生した事由をコード値で表す項目"
     values:
       "01":
         name: "新規"
@@ -38,6 +43,8 @@ corporation:
         name: "削除"
         description: "法人番号の重複指定等の理由により法人番号の指定を撤回したことを表す情報であることを意味する。"
   correct:
+    camel_case: correct
+    snake_case: correct
     name: "訂正区分"
     description: "訂正区分は、誤った内容で提供したデータを正しいデータに訂正するために使用するデータ項目。当該データ項目を活用し、誤った内容のデータを削除して、訂正後の正しいデータを取り込むことにより、データを訂正することができる。なお、訂正処理があった場合は、訂正した法人等に係る全ての履歴データを提供する。"
     values:
@@ -48,20 +55,30 @@ corporation:
         name: "訂正"
         description: "訂正したデータの場合、当該訂正区分に訂正「1」を設定する。"
   updateDate:
+    camel_case: updateDate
+    snake_case: update_date
     name: "更新年月日"
     description: ""
   changeDate:
+    camel_case: changeDate
+    snake_case: change_date
     name: "変更年月日"
     description: ""
   name:
+    camel_case: name
+    snake_case: name
     name: "商号又は名称"
     description: ""
   nameImageId:
+    camel_case: nameImageId
+    snake_case: name_image_id
     name: "商号又は名称イメージID"
     uriFormat: "http://www.houjin-bangou.nta.go.jp/image?imageid=%s"
   kind:
+    camel_case: kind
+    snake_case: kind
     name: "法人種別"
-    description: "法人種別を判別するためのデータ項目。例えば、データの取込み処理を行う場合などにおいて、処理対象として必要としない法人（組織区分）のデータを、法人種別のコード値を利用して除外設定を行うなどの活用が考えられるために提供する項目。"
+    description: "法人種別を判別するためのデータ項目 / 例えば、データの取込み処理を行う場合などにおいて、処理対象として必要としない法人（組織区分）のデータを、法人種別のコード値を利用して除外設定を行うなどの活用が考えられるために提供する項目"
     values:
       "101":
         name: "国の機関"
@@ -94,39 +111,61 @@ corporation:
         name: "その他"
         description: "その他の人格のない社団等及び日本の法律の規定により成立し、設立の登記を行わない法人の情報であることを意味する。"
   prefectureName:
+    camel_case: prefectureName
+    snake_case: prefecture_name
     name: "国内所在地（都道府県）"
     description: ""
 #   values: "See another file. ( resource.prefectureCode.yaml )"
   cityName:
+    camel_case: cityName
+    snake_case: city_name
     name: "国内所在地（市区町村）"
     description: ""
   streetNumber:
+    camel_case: streetNumber
+    snake_case: street_number
     name: "国内所在地（丁目番地等）"
     description: ""
   addressImageId:
+    camel_case: addressImageId
+    snake_case: address_image_id
     name: "国内所在地イメージID"
     description: ""
     uriFormat: "http://www.houjin-bangou.nta.go.jp/image?imageid=%s"
   prefectureCode:
-    name: "都道府県コード"
+    camel_case: prefectureCode
+    snake_case: prefecture_code
+    name: "都道府県コード (JIS X 0401 準拠)"
     description: ""
   cityCode:
-    name: "市区町村コード"
+    camel_case: cityCode
+    snake_case: city_code
+    name: "市区町村コード (JIS X 0402 準拠)"
     description: ""
   postCode:
+    camel_case: postCode
+    snake_case: post_code
     name: "郵便番号"
     description: ""
   addressOutside:
+    camel_case: addressOutside
+    snake_case: address_outside
     name: "国外所在地"
   addressOutsideImageId:
+    camel_case: addressOutsideImageId
+    snake_case: address_outside_image_id
     name: "国外所在地イメージID"
     description: ""
   closeDate:
+    camel_case: closeDate
+    snake_case: close_date
     name: "登記記録の閉鎖等年月日"
     description: ""
   closeCause:
+    camel_case: closeCause
+    snake_case: close_cause
     name: "登記記録の閉鎖等の事由"
-    description: "閉鎖の事由は、登記記録の閉鎖等が生じた事由を表すデータ項目。"
+    description: "閉鎖の事由は、登記記録の閉鎖等が生じた事由を表すデータ項目"
     values:
       "01":
         name: "清算の結了等"
@@ -141,12 +180,43 @@ corporation:
         name: "その他の清算の結了等"
         description: "設立登記法人以外について、清算の結了等に類する事由が生じた場合に表示します。"
   successorCorporateNumber:
+    camel_case: successorCorporateNumber
+    snake_case: successor_corporate_number
     name: "承継先法人番号"
-    description: ""
+    description: "合併等による事業承継があったことにより登記記録が閉鎖された場合の存続する法人の法人番号"
   changeCause:
+    camel_case: changeCause
+    snake_case: change_cause
     name: "変更事由の詳細"
-    description: ""
+    description: "合併等による事業承継があった場合の事業承継内容を示すデータ項目"
   assignmentDate:
+    camel_case: assignmentDate
+    snake_case: assignment_date
     name: "法人番号指定年月日"
-    description: ""
+    description: "法人番号指定年月日は、法人番号の指定をした年月日を表す。"
+  latest:
+    camel_case: latest
+    snake_case: latest
+    name: "最新履歴"
+    description: "応答結果のデータが最新の情報か過去の情報かを表す。 (0: 過去情報 / 1: 最新情報)"
+  enName:
+    camel_case: enName
+    snake_case: en_name
+    name: "商号又は名称（英語表記）"
+    description: "法人番号保有者が登録した商号又は名称（英語表記）"
+  enPrefectureName:
+    camel_case: enPrefectureName
+    snake_case: en_prefecture_name
+    name: "国内所在地（都道府県）（英語表記）"
+    description: "法人番号保有者が登録した本店又は主たる事務所の所在地の都道府県名（英語表記） / 本店又は主たる事務所の所在地が国外にある法人番号保有者は、国内の事務所又は営業所の所在地の都道府県名（英語表記）"
+  enCityName:
+    camel_case: enCityName
+    snake_case: en_city_name
+    name: "国内所在地（市町村丁目番地等）（英語表記）"
+    description: "法人番号保有者が登録した本店又は主たる事務所の所在地の丁目番地等（英語表記） / 法人番号保有者が登録した表記を設定しており、市区町村名等の標準化（例えば「XXX-ku」を「XXX ku」へ表現を標準化するなど）の処理は行っていない。"
+  enAddressOutside:
+    camel_case: enAddressOutside
+    snake_case: en_address_outside
+    name: "国外所在地（英語表記）"
+    description: "法人番号保有者が登録した国外における本店又は主たる事務所の所在地（英語表記） / 格納されている国内所在地（市区町村丁目番地等）（英語表記）は、法人番号保有者が登録した表記であり、所在地の表記の統一は行っていない。"
 
