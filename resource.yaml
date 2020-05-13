@@ -1,5 +1,7 @@
-# see: http://www.houjin-bangou.nta.go.jp/documents/k-resource-dl.pdf
-# see: http://www.houjin-bangou.nta.go.jp/documents/k-resource-dl-ver2.pdf
+# see: https://www.houjin-bangou.nta.go.jp/documents/k-resource-dl.pdf
+# see: https://www.houjin-bangou.nta.go.jp/documents/k-resource-dl-ver2.pdf
+# see: https://www.houjin-bangou.nta.go.jp/documents/k-resource-dl-ver3.pdf
+# see: https://www.houjin-bangou.nta.go.jp/documents/k-resource-dl-ver4.pdf
 corporation:
   corporateNumber:
     camel_case: corporateNumber
@@ -219,4 +221,22 @@ corporation:
     snake_case: en_address_outside
     name: "国外所在地（英語表記）"
     description: "法人番号保有者が登録した国外における本店又は主たる事務所の所在地（英語表記） / 格納されている国内所在地（市区町村丁目番地等）（英語表記）は、法人番号保有者が登録した表記であり、所在地の表記の統一は行っていない。"
-
+  # v3
+  furigana:
+    camel_case: furigana
+    snake_case: furigana
+    name: "フリガナ"
+    description: "法人番号保有者の商号又は名称に対するフリガナ情報を示すデータ項目。フリガナ情報に使用している文字は全角カタカナ及び長音（ー）のみである。フリガナの登録がない場合はブランクとなる。"
+  # v4
+  hihyoji:
+    camel_case: hihyoji
+    snake_case: hihyoji
+    name: "検索対象除外"
+    description: "設立登記法人のうち、登記上の所在地が、住居表示の実施や区画整理等で既に廃止されており、現在では存在しない住所表記となっていることが確認できた法人について、検索対象から除外していることを示すデータ項目。なお、この情報は法人単位で設定しており、データ提供時点の情報を表している。"
+    values:
+      "0":
+        name: "検索対象"
+        description: "検索対象となっている情報であることを意味する。"
+      "1":
+        name: "検索対象除外"
+        description: "検索対象から除外した情報であることを意味する。"
