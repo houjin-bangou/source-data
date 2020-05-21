@@ -55,7 +55,14 @@ corporation_keys = [
     'closeCause',
     'successorCorporateNumber',
     'changeCause',
-    'assignmentDate' ]
+    'assignmentDate',
+    'latest',
+    'enName',
+    'enPrefectureName',
+    'enCityName',
+    'enAddressOutside',
+    'furigana',
+    'hihyoji' ]
 
 
 

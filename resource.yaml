@@ -196,11 +196,21 @@ corporation:
     snake_case: assignment_date
     name: "法人番号指定年月日"
     description: "法人番号指定年月日は、法人番号の指定をした年月日を表す。"
+
+  # v2
   latest:
     camel_case: latest
     snake_case: latest
     name: "最新履歴"
     description: "応答結果のデータが最新の情報か過去の情報かを表す。 (0: 過去情報 / 1: 最新情報)"
+    values:
+      "0":
+        name: "過去情報"
+        description: "過去の情報であることを意味する。"
+      "1":
+        name: "最新情報"
+        description: "最新の情報であることを意味する。"
+
   enName:
     camel_case: enName
     snake_case: en_name
@@ -221,12 +231,14 @@ corporation:
     snake_case: en_address_outside
     name: "国外所在地（英語表記）"
     description: "法人番号保有者が登録した国外における本店又は主たる事務所の所在地（英語表記） / 格納されている国内所在地（市区町村丁目番地等）（英語表記）は、法人番号保有者が登録した表記であり、所在地の表記の統一は行っていない。"
+
   # v3
   furigana:
     camel_case: furigana
     snake_case: furigana
     name: "フリガナ"
     description: "法人番号保有者の商号又は名称に対するフリガナ情報を示すデータ項目。フリガナ情報に使用している文字は全角カタカナ及び長音（ー）のみである。フリガナの登録がない場合はブランクとなる。"
+
   # v4
   hihyoji:
     camel_case: hihyoji
